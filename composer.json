@@ -1,0 +1,18 @@
+{
+    "name": "veka-server/config",
+    "description": "Une classe de gestion de fichier de config",
+    "license": "MIT",
+    "keywords": ["config"],
+    "authors": [
+        {
+            "name": "Vanhaezebrouck Nicolas",
+            "email": "contact@veka-server.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "VekaServer\\Config\\" : "src/"
+        }
+    },
+    "require": {}
+}
