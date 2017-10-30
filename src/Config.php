@@ -22,10 +22,10 @@ class Config
      */
     public static function getInstance($path_config_file = null){
 
-        if(self::$_instance instanceof self)
-            return self::$_instance;
+        if(!self::$_instance instanceof self)
+            self::$_instance = new self($path_config_file);
 
-        return new self($path_config_file);
+        return self::$_instance;
 
     }
 
