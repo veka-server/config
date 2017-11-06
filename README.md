@@ -11,7 +11,7 @@ Initialisation au plus tôt dans le code
 
 Recuperation d'une valeur
 ```php
-\VekaServer\Config\Config::getSetting('db_pass');
+\VekaServer\Config\Config::getInstance()->getSetting('db_pass');
 ```
 
 ## Exemple de fichier de config
