@@ -13,6 +13,10 @@ Recuperation d'une valeur
 ```php
 \VekaServer\Config\Config::getInstance()->getSetting('db_pass');
 ```
+ou
+```php
+\VekaServer\Config\Config::getInstance()->get('db_pass');
+```
 
 ## Exemple de fichier de config
 ```php
