@@ -47,10 +47,34 @@ class Config
      */
     public function getSetting($key){
 
-        if(isset($this->settings[$key]))
-            return $this->settings[$key];
+        if(!$this->has($key))
+            throw new \Exception('Key "'.$key.'" not found on config file.');
 
-        throw new \Exception('Key "'.$key.'" not found on config file.');
+        return $this->settings[$key];
+    }
+
+    /**
+     * Get setting by key
+     *
+     * Same function as getSetting($key)
+     *
+     * @param $key
+     * @return mixed
+     * @throws \Exception Key not found on config file
+     */
+    public function get($key){
+        return $this->getSetting($key);
+    }
+
+
+    /**
+     * Check if setting exist
+     *
+     * @param $key
+     * @return bool
+     */
+    public function has($key){
+        return (array_key_exists($key,$this->settings));
     }
 
     /**
